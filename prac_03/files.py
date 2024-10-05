@@ -1,5 +1,6 @@
 # Question 1
 
 out_file = open("name.txt", "w")
-print("Name: ", file=out_file)
+name = input("Enter your name: ")
+print(name, file=out_file)
 out_file.close()
