@@ -10,8 +10,8 @@ def main():
 
     while email != "":
         name = extract_name(email)
-        name_confirmation = input(f"Is your name {name}? (Y/n) ").lower()
-        if name_confirmation != "" and name_confirmation != "y":
+        name_confirmation = input(f"Is your name {name}? (Y/n) ").upper()
+        if name_confirmation != "" and name_confirmation != "Y":
             name = input("Name: ").title()
         email_to_name[email] = name
         email = input('Email: ')
