@@ -38,10 +38,10 @@ def process_records(records):
 
 def display_results(champion_to_win_count, countries):
     """Display champions and winning countries."""
-    print("Wimbledon Champions: ")
+    print("Wimbledon Champions:")
     for champion, win_count in champion_to_win_count.items():
         print(f"{champion} {win_count}")
-    print(f"\nThese {len(countries)} countries have won Wimbledon")
+    print(f"\nThese {len(countries)} countries have won Wimbledon:")
     print(", ".join(country for country in sorted(countries)))
 
 main()
