@@ -14,3 +14,4 @@ while colour_name != "":
     except KeyError:
         print("Invalid colour")
     colour_name = input("Colour: ")
+
