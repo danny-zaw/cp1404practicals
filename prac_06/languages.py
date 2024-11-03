@@ -1,8 +1,8 @@
 """
-CP1404 - Practical 5
+CP1404 - Practical 6
 Program  : Languages
-Estimate : 20 minutes
-Actual   : 23 minutes
+Estimate : 15 minutes
+Actual   : 10 minutes
 """
 
 from prac_06.programming_language import ProgrammingLanguage

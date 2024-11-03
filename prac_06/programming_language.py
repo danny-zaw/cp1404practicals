@@ -1,14 +1,17 @@
 """
 CP1404 - Practical 6
 ProgrammingLanguage Class
-Estimate : 20 minutes
-Actual   : 23 minutes
+
+--- Writing the class ---
+Estimate : 15 minutes
+Actual   : 16 minutes
 """
 
 class ProgrammingLanguage:
+    """ Programming Language Class for storing details of different languages."""
 
     def __init__(self, language_name, typing, reflection, year):
-        """Initialise instances for language, language, reflection and year."""
+        """Initialise a ProgrammingLanguage instance."""
         self.language_name = language_name
         self.typing = typing
         self.reflection = reflection

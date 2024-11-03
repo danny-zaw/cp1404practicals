@@ -1,8 +1,10 @@
 """
 CP1404 - Practical 6
 Program   : Guitars
+
+--- Completing the client program ---
 Estimated : 20 minutes
-Actual    : 25 minutes
+Actual    : 23 minutes
 """
 
 from prac_06.guitar import Guitar
