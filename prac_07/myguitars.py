@@ -8,10 +8,22 @@ Program: My Guitars
 import csv
 
 from prac_07.guitar import Guitar
-Com
+
 def main():
     """Load guitars from CSV and display them in sorted order."""
     guitars = load_guitars()
+
+    name = input("Name: ")
+    while name != "":
+        year = int(input("Year: "))
+        cost = float(input("Cost: $"))
+
+        guitar = Guitar(name, year, cost)
+        guitars.append(guitar)
+
+        print(f"{name} ({year}) : ${cost} added.\n")
+        name = input("Name: ")
+
     guitars.sort(reverse=True)
     display_guitars(guitars)
 
