@@ -9,6 +9,8 @@ import csv
 
 from prac_07.guitar import Guitar
 
+FILENAME = 'guitars.csv'
+
 def main():
     """Load guitars from CSV and display them in sorted order."""
     guitars = load_guitars()
@@ -27,10 +29,14 @@ def main():
     guitars.sort(reverse=True)
     display_guitars(guitars)
 
+    save_guitars(guitars)
+    print(f"List of guitars saved to {FILENAME}")
+
+
 def load_guitars():
     """Load a list of guitars from CSV file."""
     guitars = []
-    in_file = open('guitars.csv', 'r', newline='')
+    in_file = open(FILENAME, 'r', newline='')
     in_file.readline()
     reader = csv.reader(in_file) # use default dialect, Excel
     for row in reader:
@@ -48,5 +54,10 @@ def display_guitars(guitars):
         vintage_string = " (vintage)" if guitar.is_vintage() else ""
         print(f"Guitar {i}: {guitar.name:>25} ({guitar.year}), worth ${guitar.cost:10,.2f}{vintage_string}")
 
+def save_guitars(guitars):
+     """Save list of guitars to a CSV file."""
+     with open(FILENAME,'w', newline='') as out_file:
+         for guitar in guitars:
+            out_file.write(f"{guitar.name},{guitar.year},{guitar.cost}\n")
 
 main()
