@@ -21,10 +21,10 @@ class Project:
         return f"{self.name}, start: {self.start_date}, priority {self.priority}, estimate: ${self.cost_estimate}, completion: {self.completion_percentage}%"
 
     def __lt__(self, other):
-        """ """
+        """Determine if a project's priority is less than another project's priority."""
         return self.priority < other.priority
 
     def is_complete(self):
-        """ """
+        """Determine if a project's completion percentage is equal to 100."""
         return self.completion_percentage == 100
 
