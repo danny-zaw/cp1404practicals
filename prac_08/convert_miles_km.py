@@ -1,6 +1,8 @@
 """
-
-
+CP1404 - Practical 8
+Program: Convert Miles to Km (Kivy App)
+Estimated: 1 hour
+Actual: 1 hour 20 minutes
 """
 
 from kivy.app import App
@@ -11,7 +13,7 @@ from kivy.properties import StringProperty
 MILES_TO_KM_CONVERSION = 1.60934
 
 class ConvertMilesToKmApp(App):
-    output_text = StringProperty("0.0")
+    output_km = StringProperty("0.0")
 
     def build(self):
         """ build the Kivy app from the kv file """
@@ -20,22 +22,22 @@ class ConvertMilesToKmApp(App):
         self.root = Builder.load_file('convert_miles_km.kv')
         return self.root
 
-    def handle_miles_to_km(self):
+    def handle_conversion(self):
         """Convert miles to kilometers and update the label."""
         try:
-            miles = float(self.root.ids.input_number.text)
+            miles = float(self.root.ids.input_miles.text)
             kilometers = miles * MILES_TO_KM_CONVERSION
-            self.output_text = f"{kilometers}"
+            self.output_km = f"{kilometers}"
         except ValueError:
-            self.output_text = "0.0"
+            self.output_km = "0.0"
 
     def handle_increment(self, change):
         """Increase or decrease text input by 1."""
         try:
-            current_value = int(self.root.ids.input_number.text)
+            miles = int(self.root.ids.input_miles.text)
         except ValueError:
-            current_value = 0
-        self.root.ids.input_number.text = str(current_value + change)
+            miles = 0
+        self.root.ids.input_miles.text = str(miles + change)
 
 ConvertMilesToKmApp().run()
 
