@@ -2,7 +2,7 @@
 CP1404 Practical 9
 Taxi Simulator Program
 Estimated: 1 hour 30 minutes
-Actual: 3 hours (with breaks)
+Actual: 3 hours (including breaks)
 """
 
 from prac_09.taxi import Taxi
